@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Tanjiro Kamado",
+    "bio": "A kindhearted boy. He lived a blissful existence with his mother and siblings, but were attacked by demons while he was out working. He joins the Demon Slayer Corps in order to turn his sister Nezuko, who has become a demon, back into a human, as well as to avenge the death of his family by hunting down the demon who killed them. Under the tutledge of Sakonji Urokodaki, he learns to wield 'Water Breathing', so that he can face the demon threat.",
+    "photo": "tanjirokamado"
+  },
+  {
+    "name": "Nezuko Kamado",
+    "bio": "Tanjiro's younger sister, who's been turned into a demon. Despite being a demon, she never attacks humans, thanks to both Urokodaki's hypnotic suggestion, and her own willpower. She joins Tanjiro in his fight against the demons using her own demonic powers.",
+    "photo": "nezukokamado"
+  },
+  {
+    "name": "Zenitsu Agatsu",
+    "bio": "He joins the Demon Slayer Corps at the same time as Tanjiro and Inosuke. He has an acute sense of hearing, and can identify the sounds made by other people or demons.In battle, when he is scared to death, he falls asleep and his personality changes to the swordsman that can unleash his 'Thunder Breathing'.",
+    "photo": "zenitsuagatsu"
+  },
+  {
+    "name": "Inosuke Hashibira",
+    "bio": "He joins the Demon Slayer Corps at the same time as Tanjiro and Zenitsu. He is a very aggressive boy, and is always seen wearing a wild boar mask and uses his 'Beast Breathing' to rush headlong into battles.",
+    "photo": "inosukehashibira"
+  },
+  {
+    "name": "Giyu Tomioka",
+    "bio": "Giyu Tomioka is the stoic swordsman that fights using his 'Water Breathing', and the Water Hashira that led Tanjiro towards joining the Demon Slayer Corps.",
+    "photo": "giyutomioka"
+  }
+]
