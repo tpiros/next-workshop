@@ -1,6 +1,11 @@
 import Link from 'next/link';
+import { useUser } from '@auth0/nextjs-auth0/client';
+import { CldImage } from 'next-cloudinary';
 
 const NavBar = () => {
+  const { user, error, isLoading } = useUser();
+  if (isLoading) return <div>Loading...</div>;
+  if (error) return <div>{error.message}</div>;
   const navItems = [
     {
       title: 'Characters',
@@ -22,30 +27,41 @@ const NavBar = () => {
             </li>
           ))}
         </ul>
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src="https://placeimg.com/80/80/people" />
-            </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-neutral rounded-box w-52"
-          >
-            <li>
-              <a className="justify-between">
-                Profile
-                <span className="badge">New</span>
-              </a>
-            </li>
-            <li>
-              <a>Settings</a>
-            </li>
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
-        </div>
+        {user ? (
+          <div className="dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <CldImage
+                  width="250"
+                  height="250"
+                  crop="thumb"
+                  gravity="faces"
+                  src={
+                    user['profile/user_metadata'].user_metadata.profile_photo
+                  }
+                  alt="User"
+                />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 p-2 shadow menu menu-compact dropdown-content bg-neutral rounded-box w-52"
+            >
+              <li>
+                <Link href="/profile" className="justify-between">
+                  Profile
+                </Link>
+              </li>
+              <li>
+                <Link href="/api/auth/logout">Logout</Link>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link href="/api/auth/login" className="btn btn-secondary">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );

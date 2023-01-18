@@ -10,11 +10,12 @@ const Character = ({ character }) => (
           height="400"
           src={character.image}
           underlay="demonslayer/galaxy"
+          alt={character.name}
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{character.name}</h2>
-        <p>{character.bio}</p>
+        <h2 className="card-title text-gray-100">{character.name}</h2>
+        <p className="text-gray-100">{character.bio}</p>
       </div>
     </div>
   </>
