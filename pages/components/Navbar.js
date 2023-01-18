@@ -4,8 +4,6 @@ import { CldImage } from 'next-cloudinary';
 
 const NavBar = () => {
   const { user, error, isLoading } = useUser();
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error.message}</div>;
   const navItems = [
     {
       title: 'Characters',
