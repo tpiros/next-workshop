@@ -1,4 +1,5 @@
 import { CldImage, CldOgImage } from 'next-cloudinary';
+import fetchData from '../../lib/api';
 
 const Character = ({ character }) => (
   <>
@@ -22,10 +23,7 @@ const Character = ({ character }) => (
 );
 
 export async function getStaticPaths() {
-  const res = await fetch(
-    'https://next-workshop-api.vercel.app/api/characters'
-  );
-  const characters = await res.json();
+  const characters = await fetchData('characters');
   const paths = characters.map((character) => ({
     params: { id: character.id.toString() },
   }));
@@ -37,10 +35,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const id = params.id;
-  const res = await fetch(
-    `https://next-workshop-api.vercel.app/api/characters/${id}`
-  );
-  const character = await res.json();
+  const character = await fetchData(`characters/${id}`);
   return {
     props: {
       character,

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import fetchData from '../lib/api';
 
 export default function Characters({ characters }) {
   return (
@@ -30,11 +31,7 @@ export default function Characters({ characters }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(
-    'https://next-workshop-api.vercel.app/api/characters'
-  );
-  const characters = await res.json();
-
+  const characters = await fetchData('characters');
   return {
     props: {
       characters,
