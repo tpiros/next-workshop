@@ -4,7 +4,7 @@ import fetchData from '../lib/api';
 export default function Characters({ characters }) {
   return (
     <>
-      <h1 className="text-5xl font-bold m-3">Characters</h1>
+      <h1 className="text-5xl font-bold m-3">Characters from the anime</h1>
       <div className="card w-96 bg-base-200 shadow-xl">
         <div className="card-body">
           <ul>
