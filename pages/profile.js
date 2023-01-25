@@ -5,7 +5,7 @@ const Profile = ({ user }) => {
   let localUser = user['profile/user_metadata'];
   return (
     <>
-      <div className="card card-side bg-base-100 shadow-xl">
+      <div className="card card-side bg-base-200 shadow-xl">
         <figure>
           <CldImage
             width="300"

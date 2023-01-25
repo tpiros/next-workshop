@@ -5,7 +5,7 @@ export default function Characters({ characters }) {
   return (
     <>
       <h1 className="text-5xl font-bold m-3">Characters</h1>
-      <div className="card w-96 bg-gray-700 shadow-xl">
+      <div className="card w-96 bg-base-200 shadow-xl">
         <div className="card-body">
           <ul>
             {characters.map((character, idx) => (

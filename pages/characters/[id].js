@@ -4,7 +4,7 @@ import fetchData from '../../lib/api';
 const Character = ({ character }) => (
   <>
     <CldOgImage src={character.image} />
-    <div className="card w-96 bg-gray-700 shadow-xl">
+    <div className="card w-96 bg-base-200 shadow-xl">
       <figure>
         <CldImage
           width="400"
