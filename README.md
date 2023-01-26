@@ -1,3 +1,23 @@
+# Notes
+
+Please make sure to add an `env.local` file as well, with the following environment variables. When deploying to Vercel you'll have to add the same environment variables before you first build your project (replace all with your values):
+
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="your-cloudinary-account-name"
+AUTH0_SECRET=''
+AUTH0_BASE_URL='http://localhost:3000'
+AUTH0_ISSUER_BASE_URL='https://********.auth0.com'
+AUTH0_CLIENT_ID=''
+AUTH0_CLIENT_SECRET=''
+```
+
+You can register for Cloudinary here: https://cloudinary.com/users/register_free
+You can register for Auth0 here: https://auth0.com/signup
+
+To learn more about the Auth0 steps with Next.js, please read the following: https://auth0.com/docs/quickstart/webapp/nextjs/01-login
+
+
+# Defaults
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
