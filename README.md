@@ -1,6 +1,6 @@
 # Notes
 
-Please make sure to add an `env.local` file as well, with the following environment variables. When deploying to Vercel you'll have to add the same environment variables before you first build your project (replace all with your values):
+Please make sure to add an `env.local` file as well (at the root of the project), with the following environment variables. When deploying to Vercel you'll have to add the same environment variables before you first build your project (replace all with your values):
 
 ```
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="your-cloudinary-account-name"
